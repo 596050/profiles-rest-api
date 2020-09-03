@@ -8,8 +8,7 @@ from django.conf import settings
 class UserProfileManager(BaseUserManager):
     """Manager for user profiles"""
 
-    def create_user(self, email, name, profile_image, phone, event_description, event_date, event_guest_count, event_type, event_postcode, event_address, event_cancelled, event_budget,
-                    event_dietary, password=None):
+    def create_user(self, email, name, profile_image=None, phone=None, event_description=None, event_date=None, event_guest_count=None, event_type=None, event_postcode=None, event_address=None, event_cancelled=None, event_budget=None, event_dietary=None, password=None):
         """Create a new user profile"""
         if not email:
             raise ValueError('User must have an email address')
