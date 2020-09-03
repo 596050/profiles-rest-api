@@ -6,3 +6,6 @@ Profiles REST API
 // vagrant ssh
 // source ~/env/bin/activate
 // python manage.py runserver 0.0.0.0:8000
+
+when adding new models
+// python manage.py makemigrations
