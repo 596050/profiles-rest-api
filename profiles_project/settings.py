@@ -29,7 +29,10 @@ DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'user-profile-feast-it.herokuapp.com'
+    'user-profile-feast-it.herokuapp.com',
+    'http://localhost:3000',
+    'http://localhost:3000/',
+    "http://127.0.0.1:3000"
 ]
 
 
