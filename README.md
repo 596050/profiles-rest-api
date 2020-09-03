@@ -9,3 +9,4 @@ Profiles REST API
 
 when adding new models
 // python manage.py makemigrations
+// python manage.py migrate
