@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from profiles_api import models
 
+
 class UserProfileSerializer(serializers.ModelSerializer):
     """Serializes a user profile object"""
 
@@ -52,51 +53,3 @@ class ProfileFeeItemSerializer(serializers.ModelSerializer):
         model = models.ProfileFeedItem
         fields = ('id', 'user_profile', 'status_text', 'created_on')
         extra_kwargs = {'user_profile': {'read_only': True}}
-
-# {
-#         "id": 1,
-#         "email": "phil_apple@gmail.co.fi",
-#         "name": "Phil Apple",
-#         "profile_image": "https://s3.amazonaws.com/uifaces/faces/twitter/sur4dye/128.jpg",
-#         "phone": "07172837467",
-#         "event_description": "I am hosting a boys night and would like pizza and beer",
-#         "event_date": "2021-10-25",
-#         "event_guest_count": 7,
-#         "event_type": "Party",
-#         "event_postcode": "WF9 3NY",
-#         "event_address": "8 Park Estate",
-#         "event_cancelled": false,
-#         "event_budget": 300,
-#         "event_dietary": null
-#     },
-#     {
-#         "id": 2,
-#         "email": "martyn_banana@gmail.co.fi",
-#         "name": "Martyn Banana",
-#         "profile_image": "https://s3.amazonaws.com/uifaces/faces/twitter/atariboy/128.jpg",
-#         "phone": "07656462636",
-#         "event_description": "For my wedding I would like to have something classy. Must be veggie.",
-#         "event_date": "2021-02-17",
-#         "event_guest_count": 300,
-#         "event_type": "Wedding",
-#         "event_postcode": "NG2 5FQ",
-#         "event_address": "Rosebery Avenue",
-#         "event_cancelled": false,
-#         "event_budget": 5000,
-#         "event_dietary": "vegetarian"
-#     }
-
-
-# steve_carrot@gmail.co.fi
-# https: // s3.amazonaws.com/uifaces/faces/twitter/BillSKenney/128.jpg
-# Steve Carrot
-# 07263545162
-# Office Christmas Party. Finger Foods. Drinks
-# 05/12/2021
-# 35
-# Corporate
-# E1 1EW
-# 20-30 Whitechapel Rd
-# TRUE
-# 3000
-# vegetarian, vegan, nut free,
